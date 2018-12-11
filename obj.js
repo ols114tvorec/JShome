@@ -27,14 +27,14 @@ alert( sum );
         "Петя": 300,
         "Даша": 250
       };
-
-function bigmax (obj)
-
-// Доделаю...
-
-
-
-
+var maxName = '';
+      var max = 0;
+      for (var name in obj){
+      if (max < obj[name]){
+max = obj[name];
+maxName = name;
+      }      
+      }
 
 
 // 3. Все числа умночить на 2; написать функцию
@@ -44,20 +44,22 @@ var salaries = {
   "Петя": 302,
   "Даша": 'jhkjh',
 };
-
+var sum = [];
  function objx2 (obj) {
         for (var key in obj) {
-            if (obj) {
+            if (typeof obj [key]); {
                 obj[key] *=  2;
+                sum.push (obj[key]);
                 console.log(obj[key]);
                 return obj[key];
             }
         }
     }
+
     objx2(salaries);
-// Умножает только первое значение свойства ???
 
 
+    
 // 4. нужно написать функцию которая возвращает значение ключа.
 // var arr = [ 
 //        { key: 'слово', value: 'значение1' },
